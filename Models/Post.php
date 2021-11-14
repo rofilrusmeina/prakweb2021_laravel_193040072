@@ -2,31 +2,20 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
-class Post 
+class Post extends Model
 {
-    private static $blog_posts = [
-        [
-            "title" => "Judul post Pertama",
-            "slug" => "judul-post-pertama",
-            "author" => "Rofil Rusmeina",
-            "body" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, animi aspernatur. Necessitatibus eos nostrum architecto quibusdam sed suscipit quasi reprehenderit maxime doloribus non aspernatur ipsa sequi, laboriosam unde quos saepe. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum qui officia culpa quasi saepe, eos numquam, error recusandae doloribus fugit quos! Voluptatum deleniti corrupti maiores animi eligendi quidem, explicabo quisquam."
-        ],
-        [
-            "title" => "Judul post Kedua",
-            "slug" => "judul-post-keedua",
-            "author" => "Doddy Ferdiansyah",
-            "body" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, animi aspernatur. Necessitatibus eos nostrum architecto quibusdam sed suscipit quasi reprehenderit maxime doloribus non aspernatur ipsa sequi, laboriosam unde quos saepe. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum qui officia culpa quasi saepe, eos numquam, error recusandae doloribus fugit quos! Voluptatum deleniti corrupti maiores animi eligendi quidem, explicabo quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum qui officia culpa quasi saepe, eos numquam, error recusandae doloribus fugit quos! Voluptatum deleniti corrupti maiores animi eligendi quidem, explicabo quisquam."
-        ]
-        ];
+    use HasFactory;
 
-
-    public static function all() {
-        return collect(self::$blog_posts);
+    // protected $fillable = ['title', 'excerpt', 'body'];
+    protected $guarded = ['id'];
+    public function category() {
+        return $this->belongsTo(Category::class);
     }
 
-    public static function find($slug) {
-        $posts = static::all();
-        return $posts->firstWhere('slug', $slug);
+    public function user() {
+        return $this->belongsTo(User::class);
     }
 }
