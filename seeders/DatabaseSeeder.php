@@ -16,19 +16,20 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
 
-        User::create([
-            'name' => 'Rofil Rusmeina',
-            'email' => 'ropill25@gmail.com',
-            'password' => bcrypt('12345')
-        ]);
+        //User::create([
+        //    'name' => 'Rofil Rusmeina',
+        //   'email' => 'ropill25@gmail.com',
+        //    'password' => bcrypt('12345')
+        //]);
 
-        User::create([
-            'name' => 'Naufal',
-            'email' => 'naufal25@gmail.com',
-            'password' => bcrypt('11111')
-        ]);
+        //User::create([
+        //    'name' => 'Naufal',
+        //    'email' => 'naufal25@gmail.com',
+        //    'password' => bcrypt('11111')
+        //]);
+
+        User::factory(3)->create();
 
         Category::create([
             'name' => 'Web Programming',
@@ -40,40 +41,41 @@ class DatabaseSeeder extends Seeder
             'slug' => 'personal'
         ]);
 
-        Post::create([
-            'title' => 'Judul Pertama',
-            'slug' => 'judul-pertama',
-            'excerpt' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro animi eligendi suscipit. Hic accusantium quas cupiditate incidunt veritatis illo veniam voluptas dicta distinctio architecto. Rerum quibusdam dignissimos quidem ullam atque!',
-            'body' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro animi eligendi suscipit. Hic accusantium quas cupiditate incidunt veritatis illo veniam voluptas dicta distinctio architecto. Rerum quibusdam dignissimos quidem ullam atque!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro animi eligendi suscipit. Hic accusantium quas cupiditate incidunt veritatis illo veniam voluptas dicta distinctio architecto. Rerum quibusdam dignissimos quidem ullam atque!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro animi eligendi suscipit. Hic accusantium quas cupiditate incidunt veritatis illo veniam voluptas dicta distinctio architecto. Rerum quibusdam dignissimos quidem ullam atque!',
-            'category_id' => 1,
-            'user_id' => 1
-        ]);
+        Post::factory(20)->create();
+        //Post::create([
+        //    'title' => 'Judul Pertama',
+        //    'slug' => 'judul-pertama',
+        //    'excerpt' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro animi eligendi suscipit. Hic accusantium quas cupiditate incidunt veritatis illo veniam voluptas dicta distinctio architecto. Rerum quibusdam dignissimos quidem ullam atque!',
+        //    'body' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro animi eligendi suscipit. Hic accusantium quas cupiditate incidunt veritatis illo veniam voluptas dicta distinctio architecto. Rerum quibusdam dignissimos quidem ullam atque!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro animi eligendi suscipit. Hic accusantium quas cupiditate incidunt veritatis illo veniam voluptas dicta distinctio architecto. Rerum quibusdam dignissimos quidem ullam atque!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro animi eligendi suscipit. Hic accusantium quas cupiditate incidunt veritatis illo veniam voluptas dicta distinctio architecto. Rerum quibusdam dignissimos quidem ullam atque!',
+        //    'category_id' => 1,
+        //    'user_id' => 1
+        //]);
 
-        Post::create([
-            'title' => 'Judul Kedua',
-            'slug' => 'judul-kedua',
-            'excerpt' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro animi eligendi suscipit. Hic accusantium quas cupiditate incidunt veritatis illo veniam voluptas dicta distinctio architecto. Rerum quibusdam dignissimos quidem ullam atque!',
-            'body' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro animi eligendi suscipit. Hic accusantium quas cupiditate incidunt veritatis illo veniam voluptas dicta distinctio architecto. Rerum quibusdam dignissimos quidem ullam atque!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro animi eligendi suscipit. Hic accusantium quas cupiditate incidunt veritatis illo veniam voluptas dicta distinctio architecto. Rerum quibusdam dignissimos quidem ullam atque!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro animi eligendi suscipit. Hic accusantium quas cupiditate incidunt veritatis illo veniam voluptas dicta distinctio architecto. Rerum quibusdam dignissimos quidem ullam atque!',
-            'category_id' => 1,
-            'user_id' => 1
-        ]);
+        //Post::create([
+        //    'title' => 'Judul Kedua',
+        //    'slug' => 'judul-kedua',
+        //    'excerpt' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro animi eligendi suscipit. Hic accusantium quas cupiditate incidunt veritatis illo veniam voluptas dicta distinctio architecto. Rerum quibusdam dignissimos quidem ullam atque!',
+        //    'body' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro animi eligendi suscipit. Hic accusantium quas cupiditate incidunt veritatis illo veniam voluptas dicta distinctio architecto. Rerum quibusdam dignissimos quidem ullam atque!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro animi eligendi suscipit. Hic accusantium quas cupiditate incidunt veritatis illo veniam voluptas dicta distinctio architecto. Rerum quibusdam dignissimos quidem ullam atque!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro animi eligendi suscipit. Hic accusantium quas cupiditate incidunt veritatis illo veniam voluptas dicta distinctio architecto. Rerum quibusdam dignissimos quidem ullam atque!',
+        //    'category_id' => 1,
+        //    'user_id' => 1
+        //]);
 
-        Post::create([
-            'title' => 'Judul Ketiga',
-            'slug' => 'judul-ketiga',
-            'excerpt' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro animi eligendi suscipit. Hic accusantium quas cupiditate incidunt veritatis illo veniam voluptas dicta distinctio architecto. Rerum quibusdam dignissimos quidem ullam atque!',
-            'body' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro animi eligendi suscipit. Hic accusantium quas cupiditate incidunt veritatis illo veniam voluptas dicta distinctio architecto. Rerum quibusdam dignissimos quidem ullam atque!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro animi eligendi suscipit. Hic accusantium quas cupiditate incidunt veritatis illo veniam voluptas dicta distinctio architecto. Rerum quibusdam dignissimos quidem ullam atque!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro animi eligendi suscipit. Hic accusantium quas cupiditate incidunt veritatis illo veniam voluptas dicta distinctio architecto. Rerum quibusdam dignissimos quidem ullam atque!',
-            'category_id' => 2,
-            'user_id' => 1
-        ]);
+        //Post::create([
+         //   'title' => 'Judul Ketiga',
+         //   'slug' => 'judul-ketiga',
+        //    'excerpt' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro animi eligendi suscipit. Hic accusantium quas cupiditate incidunt veritatis illo veniam voluptas dicta distinctio architecto. Rerum quibusdam dignissimos quidem ullam atque!',
+        //    'body' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro animi eligendi suscipit. Hic accusantium quas cupiditate incidunt veritatis illo veniam voluptas dicta distinctio architecto. Rerum quibusdam dignissimos quidem ullam atque!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro animi eligendi suscipit. Hic accusantium quas cupiditate incidunt veritatis illo veniam voluptas dicta distinctio architecto. Rerum quibusdam dignissimos quidem ullam atque!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro animi eligendi suscipit. Hic accusantium quas cupiditate incidunt veritatis illo veniam voluptas dicta distinctio architecto. Rerum quibusdam dignissimos quidem ullam atque!',
+        //    'category_id' => 2,
+        //    'user_id' => 1
+        //]);
 
-        Post::create([
-            'title' => 'Judul Keempat',
-            'slug' => 'judul-keempat',
-            'excerpt' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro animi eligendi suscipit. Hic accusantium quas cupiditate incidunt veritatis illo veniam voluptas dicta distinctio architecto. Rerum quibusdam dignissimos quidem ullam atque!',
-            'body' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro animi eligendi suscipit. Hic accusantium quas cupiditate incidunt veritatis illo veniam voluptas dicta distinctio architecto. Rerum quibusdam dignissimos quidem ullam atque!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro animi eligendi suscipit. Hic accusantium quas cupiditate incidunt veritatis illo veniam voluptas dicta distinctio architecto. Rerum quibusdam dignissimos quidem ullam atque!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro animi eligendi suscipit. Hic accusantium quas cupiditate incidunt veritatis illo veniam voluptas dicta distinctio architecto. Rerum quibusdam dignissimos quidem ullam atque!',
-            'category_id' => 2,
-            'user_id' => 2
-        ]);
+        //Post::create([
+        //    'title' => 'Judul Keempat',
+        //    'slug' => 'judul-keempat',
+        //   'excerpt' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro animi eligendi suscipit. Hic accusantium quas cupiditate incidunt veritatis illo veniam voluptas dicta distinctio architecto. Rerum quibusdam dignissimos quidem ullam atque!',
+        //    'body' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro animi eligendi suscipit. Hic accusantium quas cupiditate incidunt veritatis illo veniam voluptas dicta distinctio architecto. Rerum quibusdam dignissimos quidem ullam atque!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro animi eligendi suscipit. Hic accusantium quas cupiditate incidunt veritatis illo veniam voluptas dicta distinctio architecto. Rerum quibusdam dignissimos quidem ullam atque!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro animi eligendi suscipit. Hic accusantium quas cupiditate incidunt veritatis illo veniam voluptas dicta distinctio architecto. Rerum quibusdam dignissimos quidem ullam atque!',
+        //    'category_id' => 2,
+        //    'user_id' => 2
+        //]);
     }
 }
